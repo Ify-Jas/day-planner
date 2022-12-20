@@ -2,7 +2,7 @@
 
 This is a coding day planner challenge using jQuery.
 
-Link to deployed webpage: https://ify-jas.github.io/daily-planner/
+Link to deployed webpage: https://ify-jas.github.io/day-planner/
 
 This week's challenge was to create a day planner app using jQuery and moment.js. This allowed me to use all that we have learnt so far in APIs most especially jQuery including setting up functions, loop and event listener. 
 
