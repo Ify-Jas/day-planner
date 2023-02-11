@@ -1,6 +1,6 @@
 var container = document.getElementById('container');
 var text = document.querySelector('.textId');
-var currentDayHeader = moment('11.12.2022', 'DD.MM.YYYY').format('MMM Do YYYY');
+var currentDayHeader = moment().format('MMM Do YYYY');
 $('#currentDay').text(currentDayHeader);
 
 
@@ -18,13 +18,10 @@ function displayPlan (){
    
 }
 displayPlan();
-// var time = $(this).parent().parent().children('.time-block').attr('id');
-//         var plan = localStorage.getItem(time);
-//         $(this).val(plan);
 
-// function to colour code plans accordingly
-$('.description').each(function () {
-    var currentTime = this.previousElementSibling.id
+$('.time-block').each(function () {
+    var currentTime = $(this).id;
+    console.log(currentTime);
     if (currentTime < moment().hour()) {
         $(this).attr({
             class: 'past'
@@ -40,6 +37,24 @@ $('.description').each(function () {
     }
 
 })
+
+// $('.description').each(function () {
+//     var currentTime = this.previousElementSibling.id
+//     if (currentTime < moment().hour()) {
+//         $(this).attr({
+//             class: 'past'
+//         })
+//     } else if (currentTime > moment().hour()) {
+//         $(this).attr({
+//             class: 'future'
+//         })
+//     } else if (currentTime === moment().hour()) {
+//         $(this).attr({
+//             class: 'present'
+//         })
+//     }
+
+// })
 
 //function to save plan to local storage
 $('.saveBtn').on('click', function (event) {
